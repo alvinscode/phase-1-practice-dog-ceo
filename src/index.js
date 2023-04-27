@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const li = document.createElement("li");
         li.textContent = breedName;
         ul.appendChild(li);
+        li.addEventListener('click', function() {
+            li.style.color = 'red';
+        });
       });
     })
     .catch(error => {
@@ -51,6 +54,9 @@ fetch("https://dog.ceo/api/breeds/list/all")
       const li = document.createElement("li");
       li.textContent = breedName;
       ul.appendChild(li);
+      li.addEventListener('click', function() {
+        li.style.color = 'red';
+    });
     });
   })
   .catch(error => {
